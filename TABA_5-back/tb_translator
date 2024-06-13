@@ -1,0 +1,25 @@
+### 음식 이미지 정보 테이블 ###
+use translate;
+
+select * from tb_translator;
+select * from foodRecord;
+
+ALTER TABLE tb_translator MODIFY COLUMN menu VARCHAR(255) AFTER allerge;
+ALTER TABLE tb_translator MODIFY COLUMN allerge VARCHAR(255) AFTER info;
+
+ALTER TABLE tb_translator CHANGE COLUMN e_name ename VARCHAR(255);
+
+insert into tb_translator values(1, "가지볶음", "Gaji-Bokkeum", "Stir-fried Eggplant", "Stir-fried eggplant is a popular dish made by stir-frying sliced eggplants with various seasonings, often including garlic, soy sauce, and sometimes chili peppers. It's a savory and slightly sweet dish that can be served as a side or main dish.", "Soy sauce, garlic", "Moderate spiciness");
+insert into tb_translator values(2, "계란말이", "Gyeran-Mari", "Rolled Omelette", "Rolled omelette is a popular Korean dish made by rolling layers of seasoned egg, often with vegetables and sometimes meat. It's a light and fluffy dish usually served as a side dish or snack.", "Eggs, carrots, onions, ham", "Not spicy");
+insert into tb_translator values(3, "고사리", "Gosari", "Bracken (Fernbrake)", "Bracken, also known as fernbrake, is a traditional Korean vegetable side dish made by boiling and seasoning young bracken shoots. It is often seasoned with soy sauce, garlic, and sesame oil.", "Soy sauce, sesame oil.", "Not spicy");
+insert into tb_translator values(4, "깍두기", "Kkakdugi", "Cubed Radish Kimchi", "Cubed radish kimchi is a type of kimchi made with diced radish, chili pepper, garlic, and fish sauce. It's a crunchy and spicy fermented side dish.", "Fish sauce, chili pepper.", "Spicy");
+insert into tb_translator values(5, "깻잎장아찌", "Kkaennip-Jangajji", "Pickled Perilla Leaves", "Pickled perilla leaves are a common Korean side dish made by marinating perilla leaves in a soy sauce-based brine with garlic and chili.", "Soy sauce, chili pepper.", "Moderate spiciness");
+insert into tb_translator values(6, "도토리묵", "Dotori-Muk", "Acorn Jelly", "Acorn jelly is a Korean dish made from acorn starch, creating a firm, gelatinous texture. It's typically served sliced with a soy sauce-based seasoning.", "Soy sauce, sesame oil.", "Not spicy");
+insert into tb_translator values(7, "멸치볶음", "Myeolchi-Bokkeum", "Stir-fried Anchovies", "Stir-fried anchovies are a common Korean side dish made by stir-frying small dried anchovies with soy sauce, garlic, and sometimes sugar and chili.", "Soy sauce, anchovies, chili pepper.", "Moderate spiciness");
+insert into tb_translator values(8, "배추김치", "Baechu-Kimchi", "Napa Cabbage Kimchi", "Napa cabbage kimchi is the most common type of kimchi, made with fermented napa cabbage, chili pepper, garlic, ginger, and fish sauce.", "Fish sauce, chili pepper, garlic.", "Spicy");
+insert into tb_translator values(9, "어묵볶음", "Eomuk-Bokkeum", "Stir-fried Fish Cake", "Stir-fried fish cake is a popular Korean side dish made with thinly sliced fish cakes stir-fried with vegetables and a sweet and savory sauce.", "Fish cakes, soy sauce", "Not spicy to moderate spiciness");
+insert into tb_translator values(10, "잡채", "Japchae", "Stir-fried Glass Noodles", "Japchae is a classic Korean dish made with stir-fried glass noodles (sweet potato starch noodles) and mixed vegetables, often including meat, seasoned with soy sauce and sesame oil.", "Soy sauce, sesame oil.", "Not spicy");
+insert into tb_translator values(11, "젓갈", "Jeotgal", "Fermented Seafood", "Jeotgal refers to various Korean fermented seafood products, such as salted shrimp or fermented anchovies, used as a seasoning or side dish.", "Seafood, salt", "Varies (can be quite salty)");
+insert into tb_translator values(12, "총각김치", "Chonggak-Kimchi", "Ponytail Radish Kimchi", "Ponytail radish kimchi is a type of kimchi made with small, young radishes including their greens, seasoned with chili pepper and garlic.", "Chili pepper, garlic.", "Spicy");
+insert into tb_translator values(13, "콩나물무침", "Kongnamul-Muchim", "Seasoned Soybean Sprouts", "Seasoned soybean sprouts is a light and healthy Korean side dish made by blanching soybean sprouts and seasoning them with garlic, sesame oil, and soy sauce.", "Soy sauce, sesame oil.", "Not spicy");
+insert into tb_translator values(14, "콩자반", "Kongjaban", "Braised Black Beans", "Braised black beans is a sweet and savory Korean side dish made by braising black beans in soy sauce and sugar until tender.", "Soy sauce", "Not spicy");

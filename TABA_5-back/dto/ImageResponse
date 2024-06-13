@@ -1,0 +1,29 @@
+//DTO 패키지의 클래스
+package taba.menutranslator.dto;
+
+public class ImageResponse {
+    private String imageUrl;
+    private String flaskResponse;
+
+    public ImageResponse(String imageUrl, String flaskResponse) {
+        this.imageUrl = imageUrl;
+        this.flaskResponse = flaskResponse;
+    }
+
+    // Getters and setters
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getFlaskResponse() {
+        return flaskResponse;
+    }
+
+    public void setFlaskResponse(String flaskResponse) {
+        this.flaskResponse = flaskResponse;
+    }
+}

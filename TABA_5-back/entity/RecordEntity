@@ -1,0 +1,26 @@
+package taba.menutranslator.entity;
+
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Entity
+@Table(name = "food_record")
+@Getter
+@Setter
+public class RecordEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
+    private String fcate;
+
+    @Column(nullable = false)
+    private String fimage;
+
+    @Column
+    private String fpost;
+}

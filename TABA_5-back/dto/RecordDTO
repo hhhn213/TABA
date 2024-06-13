@@ -1,0 +1,18 @@
+package taba.menutranslator.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Getter
+@Setter
+public class RecordDTO {
+    private String fimage;
+    private String fpost;
+
+    public RecordDTO(String fpost, String fimage) {
+        this.fpost = fpost;
+        this.fimage = fimage;
+    }
+}
+

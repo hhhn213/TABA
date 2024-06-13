@@ -1,0 +1,57 @@
+# 서버 포트 설정
+server:
+  port: 8090
+
+# database 연동 설정
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/translate?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: user_taba
+    password: 1234
+  thymeleaf:
+    cache: false
+
+  # spring data jpa 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  profiles:
+    include: private
+
+# Flask 서버 URL 설정
+flask:
+  server:
+    url: http://127.0.0.1:5000
+  auth:
+    token: myToken1234
+
+# Frontend 서버 URL 설정
+frontend:
+  server:
+    url: http://localhost:3000
+
+
+upload:
+  dir: src/main/resources/images
+  image-base-url: http://192.168.0.37:8090/images
+
+cloud:
+  aws:
+    s3:
+      bucket: tabas3
+    stack.auto: false
+    region.static: ap-northeast-2
+    credentials:
+      accessKey: aaa
+      secretKey: aaa
+
+
